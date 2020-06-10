@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/JamesLHY/myWheel/issues"
   },
-  "homepage": "https://github.com/JamesLHY/myWheel#readme"
+  "homepage": "https://github.com/JamesLHY/myWheel#readme",
+  "dependencies": {
+    "vue": "^2.6.11"
+  }
 }
