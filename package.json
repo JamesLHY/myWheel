@@ -1,0 +1,22 @@
+{
+  "name": "pure",
+  "version": "0.0.1",
+  "description": "一款 UI 轮子",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JamesLHY/myWheel.git"
+  },
+  "keywords": [
+    "Vue，UI"
+  ],
+  "author": "lhy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JamesLHY/myWheel/issues"
+  },
+  "homepage": "https://github.com/JamesLHY/myWheel#readme"
+}
