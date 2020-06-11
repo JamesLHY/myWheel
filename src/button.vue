@@ -1,7 +1,8 @@
 <template>
-    <button class="g-button" :class="{[`icon-${iconPosition}`]: true}">
-        <g-icon :name="icon" class="icon" v-if="icon"></g-icon>
-        <g-icon name="loading" class="loading"></g-icon>
+    <button class="g-button" :class="{[`icon-${iconPosition}`]: true}"
+    @click="$emit('click')">
+        <g-icon :name="icon" class="icon" v-if="icon && !loading"></g-icon>
+        <g-icon name="loading" class="loading icon" v-if="loading"></g-icon>
         <div class="content">
             <slot></slot>
         </div>
@@ -9,29 +10,36 @@
 </template>
 <script>
     import Icon from "./icon";
+
     export default {
         components: {Icon},
         props: {
-            icon:{},
-            iconPosition:{
-                type:String,
-                default:'left',
-                validator(value){
+            loading: {
+                type: Boolean,
+                default: false
+            },
+            icon: {},
+            iconPosition: {
+                type: String,
+                default: 'left',
+                validator(value) {
                     return value === 'left' || value === 'right';
                 }
             }
         }
+
     }
 </script>
 <style lang="scss">
     @keyframes spin {
-        0%{
+        0% {
             transform: rotate(0deg);
         }
-        100%{
+        100% {
             transform: rotate(360deg);
         }
     }
+
     .g-button {
         font-size: var(--font-size);
         height: var(--button-height);
@@ -72,13 +80,14 @@
 
             > .icon {
                 order: 2;
-                margin:0  0 0 .1em
+                margin: 0 0 0 .1em
             }
         ;
 
         }
     }
-    .loading{
+
+    .loading {
         animation: spin 1s infinite;
     }
 </style>
