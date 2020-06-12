@@ -18,7 +18,7 @@ const expect = chai.expect;
 import spies from 'chai-spies';
 chai.use(spies);
 {
-    const Constructor = Vue.extend(Button);
+    const Constructor = Vue.extend(Button)
     const vm = new Constructor({
         propsData:{
             icon:'setting'
