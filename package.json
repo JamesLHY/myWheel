@@ -2,7 +2,7 @@
   "name": "pure-wheel",
   "version": "0.0.1",
   "description": "一款 UI 轮子",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "dev-test": "parcel watch test/* --no-cache & karma start",
     "test": "parcel build test/* --no-cache --no-minify && karma start --single-run"
