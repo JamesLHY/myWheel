@@ -1,6 +1,7 @@
 # pure-wheel 一个基于 Vue 的轮子
 
 [![Build Status](https://travis-ci.org/JamesLHY/myWheel.svg?branch=master)](https://travis-ci.org/JamesLHY/myWheel)
+![npm](https://img.shields.io/npm/v/pure-wheel)
 ## 介绍
 
 学习 Vue 过程中做的一个UI框架
