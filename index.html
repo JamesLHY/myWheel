@@ -12,36 +12,33 @@
             padding: 0;
             box-sizing: border-box
         }
-        :root{
-            --button-height:32px;
+
+        :root {
+            --button-height: 32px;
             --font-size: 14px;
-            --button-bg:white;
-            --button-active-bg:#eee;
-            --border-radius:4px;
-            --color:#333;
-            --border-color:#999;
-            --border-color-hover:#666;
+            --button-bg: white;
+            --button-active-bg: #eee;
+            --border-radius: 4px;
+            --color: #333;
+            --border-color: #999;
+            --border-color-hover: #666;
         }
+
         #app {
             margin: 20px;
         }
-        body{
+
+        body {
             font-size: var(--font-size);
         }
     </style>
 </head>
 <body>
-<div id="test"></div>
 <div id="app">
-    <g-button :loading="loading1" @click="loading1 = !loading1">按钮</g-button>
-    <g-button>按钮</g-button>
-    <g-button icon="setting" icon-position="right">按钮</g-button>
-    <g-button-group>
-        <div> <g-button icon="left">上一页</g-button></div>
-        <g-button icon="left">上一页</g-button>
-        <g-button icon="">首页</g-button>
-        <g-button icon="right" icon-position="right">下一页</g-button>
-    </g-button-group>
+    <g-input value="普通态"></g-input>
+    <g-input value="禁止选择状态" disabled></g-input>
+    <g-input value="只读状态" readonly></g-input>
+    <g-input value="error状态" error="xxx"></g-input>
 </div>
 <script src="./src/app.js"></script>
 </body>
