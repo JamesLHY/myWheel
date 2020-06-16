@@ -36,16 +36,17 @@
 <body>
 
 <div id="app">
-    <g-row>
-        <g-col></g-col>
-        <g-col></g-col>
-    </g-row>
-    <g-row>
-        <g-col ></g-col>
-        <g-col span="20" offset="2"></g-col>
-        <g-col span="2"></g-col>
-    </g-row>
-
+    <div style="border:1px solid black">
+        <g-row gutter="20">
+            <g-col>1</g-col>
+            <g-col>2</g-col>
+        </g-row>
+        <g-row gutter="20">
+            <g-col></g-col>
+            <g-col ></g-col>
+            <g-col ></g-col>
+        </g-row>
+    </div>
     <hr>
     <g-input value="普通态"></g-input>
     <g-input value="普通态" v-model="message"></g-input>
