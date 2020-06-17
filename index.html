@@ -31,42 +31,24 @@
         body {
             font-size: var(--font-size);
         }
+        .demo{
+            background: grey;
+            border:1px solid red;
+            height: 100px;
+        }
     </style>
 </head>
 <body>
-
 <div id="app">
-    <div style="border:1px solid black">
-        <g-row gutter="20">
-            <g-col span="22"
-                   :ipad="{span:8}"
-                   :narrow-pc="{span:4}"
-                   :pc="{span:2}"
-                   :wide-pc="{span:1}"
-            >
-                1</g-col>
-            <g-col span="12"
-                   :ipad="{span:16}"
-                   :narrow-pc="{span:20}"
-                   :pc="{span:22}"
-                   :wide-pc="{span:23}"
-            >
-                2</g-col>
-        </g-row>
-        <g-row gutter="20">
-            <g-col></g-col>
-            <g-col></g-col>
-            <g-col></g-col>
-        </g-row>
-    </div>
-    <hr>
-    <g-input value="普通态"></g-input>
-    <g-input value="普通态" v-model="message"></g-input>
-    {{message}}
-    <g-input value="禁止选择状态" disabled></g-input>
-    <g-input value="只读状态" readonly></g-input>
-    <g-input value="error状态" error="xxx"></g-input>
-    <g-input value="error状态" @change="inputChange"></g-input>
+    <g-row>
+        <g-col span="24" :ipad="{span:12}" :pc="{span:8}"><div class="demo"></div></g-col>
+        <g-col span="24" :ipad="{span:12}" :pc="{span:8}"><div class="demo"></div></g-col>
+        <g-col span="24" :ipad="{span:12}" :pc="{span:8}"><div class="demo"></div></g-col>
+        <g-col span="24" :ipad="{span:12}" :pc="{span:8}"><div class="demo"></div></g-col>
+        <g-col span="24" :ipad="{span:12}" :pc="{span:8}"><div class="demo"></div></g-col>
+        <g-col span="24" :ipad="{span:12}" :pc="{span:8}"><div class="demo"></div></g-col>
+    </g-row>
+
 </div>
 <script src="./src/app.js"></script>
 </body>
