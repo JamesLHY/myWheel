@@ -5,7 +5,6 @@
 </template>
 <style lang="scss" scoped>
     .col {
-
         $class: col-;
         @for $n from 1 through 24 {
             &.#{$class}#{$n} {
@@ -114,17 +113,25 @@
                 gutter: 0
             }
         },
+        methods: {
+            createClasses (obj, str = '') {
+                if (!obj) {return []}
+                let array = []
+                if (obj.span) { array.push(`col-${str}${obj.span}`) }
+                if (obj.offset) { array.push(`offset-${str}${obj.offset}`) }
+                return array
+            }
+        },
         computed: {
             colClass() {
                 let {span, offset, ipad, narrowPc, pc, widePc} = this
-
+                let createClasses = this.createClasses
                 return [
-                    span && `col-${span}`,
-                    offset && `offset-${offset}`,
-                    ...(ipad ? [`col-ipad-${ipad.span}`] : []),
-                    ...(narrowPc ? [`col-narrowPc-${narrowPc.span}`] : []),
-                    ...(pc ? [`col-pc-${pc.span}`] : []),
-                    ...(widePc ? [`col-widePc-${widePc.span}`] : [])
+                    ...createClasses({span, offset}),
+                    ...createClasses(ipad, 'ipad-'),
+                    ...createClasses(narrowPc, 'narrow-pc-'),
+                    ...createClasses(pc, 'pc-'),
+                    ...createClasses(widePc, 'wide-pc-'),
                 ]
             },
             colStyle() {
