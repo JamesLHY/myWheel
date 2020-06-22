@@ -33,21 +33,31 @@
         }
         .demo{
             border:1px solid grey;
-
            min-height: 100px;
+        }
+        .sider{
+            background: #333333;
+            width: 200px;
+        }
+        .header{
+            background: #999;
+            height: 100px;
+        }
+        .footer{
+            background: #cccccc;
+            height: 50px;
         }
     </style>
 </head>
 <body>
 <div id="app">
   <g-layout style="height: 100vh;">
-      <g-header class="demo">header</g-header>
+      <g-sider >sider</g-sider>
       <g-layout>
-          <g-sider class="demo">sider</g-sider>
-          <g-content class="demo">content</g-content>
+          <g-header >header</g-header>
+          <g-content >content</g-content>
+          <g-footer>footer</g-footer>
       </g-layout>
-
-      <g-footer class="demo">footer</g-footer>
   </g-layout>
 </div>
 <script src="./src/app.js"></script>
