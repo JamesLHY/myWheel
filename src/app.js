@@ -12,10 +12,11 @@ import Content from './Content'
 import Footer from './Footer'
 import Toast from './toast'
 import Plugin from './plugin'
-Vue.component('g-button', Button);
-Vue.component('g-icon', Icon);
-Vue.component('g-button-group', ButtonGroup);
-Vue.component('g-input',Input )
+
+Vue.component('g-button', Button)
+Vue.component('g-icon', Icon)
+Vue.component('g-button-group', ButtonGroup)
+Vue.component('g-input', Input)
 Vue.component('g-row', Row)
 Vue.component('g-col', Col)
 Vue.component('g-layout', Layout)
@@ -27,17 +28,19 @@ Vue.component('g-toast', Toast)
 Vue.use(Plugin)
 new Vue({
     el: '#app',
-    data:{
-        loading1:false,
-        message:'hi'
+    data: {
+        loading1: false,
+        message: 'hi'
     },
     created() {
 
     },
-    methods:{
-        showToast(){
-            this.$toast('我是message')
+    methods: {
+        showToast() {
+            this.$toast('我是message', {
+                enableHtml: true
+            })
         }
     }
-});
+})
 
