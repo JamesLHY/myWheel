@@ -21,7 +21,7 @@
             },
             autoCloseDelay: {
                 type: Number,
-                default: 3
+                default: 50
             },
             closeButton: {
                 type: Object,
@@ -69,6 +69,7 @@
             },
             close() {
                 this.$el.remove()
+                this.$emit('close')
                 this.$destroy()
             },
             onClickClose() {
