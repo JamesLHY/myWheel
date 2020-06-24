@@ -40,7 +40,7 @@ new Vue({
             this.$toast('我是message', {
                 position:'middle',
                 enableHtml: true,
-                autoClose: true
+                autoClose: 3
             })
         }
     }

@@ -18,13 +18,13 @@
         name: 'PureToast',
         props: {
             autoClose: {
-                type: Boolean,
-                default: true
+                type: [Boolean,Number],
+                default: 5,
+                validator(value) {
+                    return value === false || 'number' === typeof value;
+                }
             },
-            autoCloseDelay: {
-                type: Number,
-                default: 50
-            },
+
             closeButton: {
                 type: Object,
                 default: () => {
@@ -61,7 +61,7 @@
                 if (this.autoClose) {
                     setTimeout(() => {
                         this.close()
-                    }, this.autoCloseDelay * 1000)
+                    }, this.autoClose * 1000)
                 }
             },
             updateStyles() {
