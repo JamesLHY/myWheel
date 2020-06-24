@@ -38,7 +38,9 @@ new Vue({
     methods: {
         showToast() {
             this.$toast('我是message', {
-                enableHtml: true
+                position:'middle',
+                enableHtml: true,
+                autoClose: false
             })
         }
     }
