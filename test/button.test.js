@@ -1,7 +1,7 @@
 import {describe,it,} from "mocha"
 const expect = chai.expect;
 import Vue from 'vue'
-import Button from '../src/button'
+import Button from '../src/button/button'
 
 Vue.config.productionTip = false
 Vue.config.devtools = false

@@ -2,7 +2,7 @@ import {describe,it,afterEach} from "mocha"
 
 const expect = chai.expect
 import Vue from 'vue'
-import Input from '../src/input'
+import Input from '../src/input/input'
 
 Vue.config.productionTip = false
 Vue.config.devtools = false
